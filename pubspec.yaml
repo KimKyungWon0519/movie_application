@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  movie_boxoffice:
+    path: ./movie_boxoffice
+
   go_router: ^12.1.1
 
 dev_dependencies:

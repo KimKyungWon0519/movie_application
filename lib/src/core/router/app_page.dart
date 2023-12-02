@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:movie_application/src/core/router/app_router.dart';
-import 'package:movie_application/src/features/main/presentation/pages/main_page/main_page.dart';
+import 'package:movie_boxoffice/movie_boxoffice.dart';
 
 final class AppPage {
   const AppPage._();
@@ -11,7 +11,7 @@ final class AppPage {
     routes: [
       GoRoute(
         path: AppRouter.main,
-        builder: (context, state) => const MainPage(),
+        builder: (context, state) => const MovieBoxofficePage(),
       ),
     ],
     initialLocation: initialLocation,
