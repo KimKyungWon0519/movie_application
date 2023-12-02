@@ -45,30 +45,57 @@ class _MovieInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          '영화 제목',
-          style: Theme.of(context)
-              .textTheme
-              .titleSmall
-              ?.copyWith(fontWeight: FontWeight.bold),
-        ),
+        _Title(),
         Expanded(
-          child: Text(
-            '영화 내용' * 100,
-            overflow: TextOverflow.fade,
-          ),
+          child: _Description(),
         ),
-        Text(
-          '개봉일 : 2023-05-11',
-          style: Theme.of(context)
-              .textTheme
-              .bodySmall
-              ?.copyWith(color: Colors.grey[800]),
-        ),
+        _OpenDate()
       ],
+    );
+  }
+}
+
+class _Title extends StatelessWidget {
+  const _Title();
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '영화 제목',
+      style: Theme.of(context)
+          .textTheme
+          .titleSmall
+          ?.copyWith(fontWeight: FontWeight.bold),
+    );
+  }
+}
+
+class _Description extends StatelessWidget {
+  const _Description();
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '영화 내용' * 100,
+      overflow: TextOverflow.fade,
+    );
+  }
+}
+
+class _OpenDate extends StatelessWidget {
+  const _OpenDate();
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '개봉일 : 2023-05-11',
+      style: Theme.of(context)
+          .textTheme
+          .bodySmall
+          ?.copyWith(color: Colors.grey[800]),
     );
   }
 }
