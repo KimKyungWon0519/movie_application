@@ -15,9 +15,7 @@ class MovieCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-              'https://www.movieposters.com/cdn/shop/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089',
-            ),
+            const _ThumbNail(),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(10),
@@ -51,6 +49,17 @@ class MovieCard extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class _ThumbNail extends StatelessWidget {
+  const _ThumbNail();
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.network(
+      'https://www.movieposters.com/cdn/shop/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089',
     );
   }
 }
