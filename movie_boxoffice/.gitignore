@@ -1,3 +1,6 @@
+# Build Runner Output
+*.g.dart
+
 # Miscellaneous
 *.class
 *.log
