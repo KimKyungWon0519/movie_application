@@ -3,4 +3,5 @@ final class MovieApiUrls {
 
   static const String baseUrl =
       'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice';
+  static const String dailyBoxOffice = '/searchDailyBoxOfficeList.json';
 }

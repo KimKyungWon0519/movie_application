@@ -7,4 +7,9 @@ part 'movie_client.g.dart';
 @RestApi(baseUrl: MovieApiUrls.baseUrl)
 abstract class MovieClient {
   factory MovieClient(Dio dio, {String baseUrl}) = _MovieClient;
+
+  @GET(MovieApiUrls.dailyBoxOffice)
+  Future getDaliyBoxOffice({
+    @Query('targetDt') required String date,
+  });
 }
